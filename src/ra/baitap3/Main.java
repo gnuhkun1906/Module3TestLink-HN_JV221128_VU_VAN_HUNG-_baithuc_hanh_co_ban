@@ -45,7 +45,7 @@ public class Main {
 
 
         // Đếm Số nguyên tố xuất hiện trong mảng
-       int count=0;
+        int count = 0;
         boolean check = true;
         for (int i = 0; i < arr.length; i++) {
 
@@ -53,7 +53,9 @@ public class Main {
                 if (arr[i] < 2) {
                     check = false;
                     break;
-                } else if (arr[i] % j == 0) {
+                }
+
+                     else if (arr[i] % j == 0) {
                         check = false;
                         break;
                     } else {
@@ -61,12 +63,13 @@ public class Main {
                     }
 
 
+                }
+                if (check) {
+                    count++;
+                }
             }
-            if (check) {
-                count++;
-            }
-        }
 
-                System.out.println("Số lần xuất hiện của số nguyên tố là :"+count);
+
+           System.out.println("Số lần xuất hiện của số nguyên tố là :" + count);
     }
 }
